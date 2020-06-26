@@ -15,10 +15,7 @@ if (isset($registerbtn)) {
 
   if (isset($loginbtn))
 {
-//$host="sql211.epizy.com";
-//$username="epiz_26057781";
-//$dbpassword="BOG5lrrAbUxu4b";
-//$db="epiz_26057781_resume";
+
 
 $host="127.0.0.1:3325";
 $username="root";
