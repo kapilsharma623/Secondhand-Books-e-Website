@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+*{
+    box-sizing: border-box;
+}
+main .user .information .col-md-6 .imgmod
+{
+    height: 50px !important;
+    width: 50px !important;
+}
+
+
+
+.book{
+    font-family: 'Piedra', cursive;
+    font-weight: 500;
+    font-size: 30px;
+    color: #E5E7E9;
+}
+.store{
+    font-family: 'Piedra', cursive;
+    font-weight: 500;
+    font-size: 30px;
+    color: #E5E7E9;
+}
+
+
+
+.user .information .col-md-6
+{
+    background-color: white !important;
+    border-radius: 16px;
+   
+   
+}
+
+.user .information .col-md-6 form input,.btn
+{
+    border-radius: 16px;
+   
+}
+.user .information .col-md-6 form button
+{
+    margin-left: 50%;
+    transform: translateX(-50%);
+   
+}
+main .user .information .sb .col-6
+{
+    border: 1px solid rgb(85, 84, 84);
+    font-family: 'Orbitron', sans-serif;
+    background-color: white;
+   
+}
+main .user .information .sb
+ .col-6:hover
+{
+   background-color: black;
+   color: white;
+   
+}
+.user .information .sb
+ .col-6 .buy{
+    text-decoration: none !important;
+    color: black !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 30px !important;
+}
+.user .information .sb
+ .col-6 .sell{
+    text-decoration: none !important;
+    color: black !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 30px !important;
+}
+.user .information .sb
+ .col-6 .buy:hover{
+    text-decoration: none !important;
+    color: white !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 30px !important;
+}
+.user .information .sb
+ .col-6 .sell:hover{
+    text-decoration: none !important;
+    color: white !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 30px !important;
+}
+
+
+
+@media only screen and (max-width:580px)
+{
+    
+
+
+}
