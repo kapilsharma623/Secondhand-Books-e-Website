@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+*{
+    box-sizing: border-box;
+}
+.book{
+    font-family: 'Piedra', cursive;
+    font-weight: 500;
+    font-size: 30px;
+    color: #E5E7E9;
+}
+.store{
+    font-family: 'Piedra', cursive;
+    font-weight: 500;
+    font-size: 30px;
+    color: #E5E7E9;
+}
+.listbook .col-md-3 .card-img-top
+{
+    height: 350px;
+}
+.listbook .col-md-3 .card-body .card-text
+{
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.listbook .col-md-3 .card-body .btn
+{
+    width:60px;
+   font-size: 15px;
+}
+.listbook .col-md-3 .card-body .text-muted
+{
+ font-size: 20px !important;
+}
+
+
+@media only screen and (max-width:500px)
+{
+
+    
+    .listbook .card .card-img-top
+    {
+        width: 100%; 
+        height:150px !important;
+    }
+    .listbook .card .card-body .card-text
+    {
+       font-size: 10px;
+        text-transform: capitalize;
+    }
+    .listbook .card .card-body .btn
+    {
+       font-size: 12px !important;
+     }
+     .listbook .col-md-3 .card-body .text-muted
+{
+ font-size: 9px !important;
+}
+.listbook .col-md-3 .card-body .pricetag
+{
+ font-size: 10px !important;
+ color: black;
+}
+.listbook .col-md-3 .card-body .bookname
+
+{
+    height: 60px !important;
+}
+     
+}
+@media only screen and (min-width:500px)
+{
+    .listbook .card .card-img-top
+    {
+        width: 100%; 
+        height:200px !important;
+    }
+    .listbook .card .card-body .card-text
+    {
+       font-size: 14px;
+       text-transform: capitalize;
+    }
+    .listbook .col-md-3 .card-body .text-muted
+    {
+     font-size: 11px !important;
+    }
+    .listbook .col-md-3 .card-body .pricetag
+    {
+     font-size: 12px !important;
+     color: black;
+    }
+    .listbook .col-md-3 .card-body .bookname
+
+    {
+        height: 80px !important;
+    }
+    
+   
+}
+@media only screen and (min-width:800px)
+{
+    .card .card-img-top
+    {
+        width: 100%; 
+        height:300px !important;
+    }
+    .listbook .col-md-3 .card-body .text-muted
+    {
+     font-size: 12px !important;
+    }
+    .listbook .col-md-3 .card-body .pricetag
+    {
+     font-size: 13px !important;
+     color: black;
+    }
+    .listbook .col-md-3 .card-body .bookname
+
+    {
+        height: 80px !important;
+    }
+   
+    
+
+}
+@media only screen and (min-width:1100px)
+{
+    .listbook .card .card-img-top
+    {
+        width: 100%; 
+        height:350px !important;
+    }
+    .listbook .card .card-body .card-text
+    {
+       font-size: 16px;
+       text-transform: capitalize;
+    }
+    .listbook .col-md-3 .card-body .text-muted
+    {
+     font-size: 13px !important;
+    }
+    .listbook .col-md-3 .card-body .pricetag
+    {
+     font-size: 14px !important;
+     color: black;
+    }
+    .listbook .col-md-3 .card-body .bookname
+
+    {
+        height: 60px !important;
+    }
+    
+    
+
+}

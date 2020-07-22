@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+}
+.book{
+    font-family: 'Piedra', cursive;
+    font-weight: 500;
+    font-size: 30px;
+    color: #E5E7E9;
+}
+.store{
+    font-family: 'Piedra', cursive;
+    font-weight: 500;
+    font-size: 30px;
+    color: #E5E7E9;
+}
+
+.user .information .col-md-6
+{
+    background-color: white !important;
+    border-radius: 16px;
+}
+
+.user .information .col-md-6 form input,.btn
+{
+    border-radius: 16px;
+   
+}
+.user .information .col-md-6 form textarea
+{
+   height: 100px;
+   border-radius: 16px !important;
+
+}
+.user .information .col-md-6 form button
+{
+    margin-left: 50%;
+    transform: translateX(-50%);
+   
+}
+main .user .information .sb .col-6
+{
+    border: 1px solid rgb(85, 84, 84);
+    font-family: 'Orbitron', sans-serif;
+    background-color: white;
+   
+}

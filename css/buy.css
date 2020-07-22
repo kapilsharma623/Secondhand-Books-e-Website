@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+*{
+    box-sizing: border-box;
+}
+.book{
+    font-family: 'Piedra', cursive;
+    font-weight: 500;
+    font-size: 30px;
+   color: #E5E7E9;
+}
+.store{
+    font-family: 'Piedra', cursive;
+    font-weight: 500;
+    font-size: 30px;
+    color: #E5E7E9;
+}
+.buydetail
+{
+    height: 100%;
+}
+.buydetail .buy
+{
+    height: 100%;
+}
+.buydetail .buy .col-md-4 img
+{
+height: 480px;
+} 
+.buydetail .buy .col-md-7 
+{
+    font-family: Open Sans;
+    height: 100%;
+}
+.buydetail .buy .col-md-7 .bookname
+{
+    font-weight: 500;
+}
+.buydetail .buy .col-md-7 .authorname
+{
+    font-size: 15px;
+}
+.buydetail .buy .col-md-7 .description #description
+{
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+}
+.buydetail .buy .col-md-7 .description p
+{
+    font-size: 14px;
+    font-weight: 0;
+    color: gray;
+
+}
+
+
+
+@media only screen and (max-width:500px)
+{
+    .buydetail
+{
+    height: 100%;
+}
+    .buydetail .buy .col-md-4 img
+{
+height: 300px;
+width: 70% !important;
+margin-left: 2%;
+
+} 
+
+
+}
+
+@media only screen and (min-width:500px)
+{
+
+    .buydetail .buy .col-md-4 img
+{
+height: 400px;
+width: 70% !important;
+margin-left: 2%;
+
+} 
+
+
+}
+@media only screen and (min-width:768px)
+{
+
+    .buydetail .buy .col-md-4 img
+{
+height: 400px;
+width: 100% !important;
+
+
+} 
+
+
+}
+@media only screen and (min-width:900px)
+{
+
+    .buydetail .buy .col-md-4 img
+{
+    height: 480px;
+    width: 100% !important;
+
+
+} 
+
+
+}

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+.book{
+    font-family: 'Piedra', cursive;
+    font-weight: 500;
+    font-size: 30px;
+    color: #E5E7E9;
+}
+.store{
+    font-family: 'Piedra', cursive;
+    font-weight: 500;
+    font-size: 30px;
+    color: #E5E7E9;
+}
+.delivery .heading
+{
+    border:0px 0px 0px 0px solid black;
+}
+
+.delivery .heading h2
+{
+    font-size: 20px !important;
+    font-family: Open Sans;
+}
+
+.detail .col-11 .col-md-2 img
+{
+    height: 200px !important;
+}
+.detail .col-11 h5
+{
+    font-size: 16px !important;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.cost .col-11 h5
+{
+    font-size: 15px !important;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+.address h1
+{
+    font-size: 25px !important;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+.address .col-md-8
+{
+    font-size: 14px !important;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.address .col-md-8 form button
+{
+    margin-left: 50% !important;
+transform: translateX(-50%) !important;
+border-radius: 15px;
+}
+.address .col-md-8 form input
+{
+  
+    border-radius: 15px !important;
+}
+
+
+
+@media only screen and (max-width:500px)
+{
+    .delivery .heading h2
+{
+    font-size: 15px !important;
+    font-family: Open Sans;
+}
+.detail .col-11 .col-md-2 img
+{
+    height: 150px !important;
+}
+.detail .col-11 h5
+{
+    font-size: 12px !important;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.address h1
+{
+    font-size: 16px !important;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+.address .col-md-8
+{
+    font-size: 12px !important;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+}
+@media only screen and (min-width:800px)
+{
+    .detail .col-11 .col-md-2 img
+{
+    height: 270px !important;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+}

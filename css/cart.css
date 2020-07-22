@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+}
+.book{
+    font-family: 'Piedra', cursive;
+    font-weight: 500;
+    font-size: 30px;
+    color: #E5E7E9;
+}
+.store{
+    font-family: 'Piedra', cursive;
+    font-weight: 500;
+    font-size: 30px;
+    color: #E5E7E9;
+}
+.cart
+{
+    height: 100%;
+    width: 100%;
+}
+.cart .head h1
+{
+    font-family: 'Orbitron', sans-serif !important;
+}
+.cart .head .cartlists .col-3 img
+{
+    height: 100%;
+}
+.cart .head .cartlists .col-3 
+{
+    height: 220px;
+}
+.cart .head .cartlists .col-9
+{
+    height: 220px;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #EAEDED;
+}
+.cart .head .cartlists .col-9 h2{
+    font-size: 30px;
+}
+
+
+
+@media only screen and (max-width:500px)
+{
+    .cart .head .cartlists .col-3 img
+    {
+        height: 100%;
+    } 
+    .cart .head .cartlists .col-3 
+{
+    height: 160px;
+}
+    .cart .head h1
+     {
+    font-size: 30px;
+     }
+     .cart .head .cartlists .col-9 h2{
+        font-size: 20px;
+    }
+    .cart .head .cartlists .col-9
+    {
+    height: 160px;
+    }
+}
