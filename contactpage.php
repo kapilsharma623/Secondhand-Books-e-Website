@@ -13,8 +13,8 @@ session_start();
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/profile.css">
-<title>User Profile</title>
+<link rel="stylesheet" href="css/contactpage.css">
+<title>Contact Page</title>
 </head>
 <body>
     <header class="p-0"style="font-family: Open Sans;">
@@ -80,59 +80,35 @@ session_start();
 </div>
  </nav>
 </header>
+
     <main>
-        <section class="user"> 
-           <div class="information  pb-3 ">
-           <div class="col-md-6 col-9 pt-3 pb-3 m-auto text-left">
-            <h3 class="pt-2 pb-2" style="font-family: 'Orbitron', sans-serif !important;">Profile Detail</h3> 
-          <img src="upload/blank-profile-picture-973460_640.png" alt="book" class="imgmod img-fluid w-50 rounded-circle img-thumbnail  d-block" name="profileimg">
- <form class="pl-md-3 pr-md-3" method="POST" action="profilecontactdb.php" enctype="multipart/form-data">
-<div class="uploadfile pt-3 pb-2">
-  <input type="file" class="p-1"name="file">
-  <input type="submit" class="border border-secondary rounded text-black ml-1" name="upload" value="upload">
-</div>
+    <section class="user"> 
+           <div class="information  pb-3 mt-4">
+           <div class="col-md-6 col-9 pt-3 pb-3 m-auto text-left shadow-lg">
+            <h3 class="pt-2 pb-4" style="font-family: 'Orbitron', sans-serif !important;">Contact Us</h3> 
+
+ <form class="pl-md-3 pr-md-3" method="POST" action="contact.php">
  <div class="form-group">
     <label for="exampleInputPassword1">Name</label>
-    <input type="name" class="form-control" name="profilename" placeholder="Enter Name">
+    <input type="name" class="form-control" id="exampleInputPassword1" name="profilename" placeholder="Enter Name">
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" name="profileemail" aria-describedby="emailHelp" placeholder="Enter Email">
+    <input type="email" class="form-control" id="exampleInputEmail1" name="profileemail" aria-describedby="emailHelp" placeholder="Enter Email">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Phone No</label>
-    <input type="number" class="form-control"  name="phone" placeholder="Enter Phone Number">
+    <label for="exampleFormControlTextarea1">Message</label>
+    <textarea class="form-control" placeholder="Enter Message" name="customermessage"></textarea>
   </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Address</label>
-    <input type="text" class="form-control" name="address" placeholder="Enter Address">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Landmark</label>
-    <input type="text" class="form-control" name="landmark" placeholder="Enter Landmark">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">State</label>
-    <input type="text" class="form-control"  name="state" placeholder="Enter State">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">City</label>
-    <input type="text" class="form-control"  name="city" placeholder="Enter City">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Zip code</label>
-    <input type="text" class="form-control" name="zip" placeholder="Enter Zip code">
-  </div>
-
-  <button type="submit" class="btn btn-dark" name="profilesubmit">Submit</button>
-  
+  <button type="submit" class="btn  btn-dark" name="profilesubmit">Submit</button>
 
 </form>
 
  </div>
-</div>
+ </div>
 </section>
 </main>
+
   <footer class="bg-dark mt-3">
     <div class="container">
       <div class="box d-md-flex flex-row pt-2">

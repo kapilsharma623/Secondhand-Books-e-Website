@@ -7,20 +7,19 @@ session_start();
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://use.fontawesome.com/c8f2e390c3.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/profile.css">
-<title>User Profile</title>
+<link rel="stylesheet" href="css/sell.css">
+<title>Sell Books</title>
 </head>
 <body>
-    <header class="p-0"style="font-family: Open Sans;">
+<header class="p-0"style="font-family: Open Sans;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#"><i class="fas fa-book-open" aria-hidden="true"style="color:white;"></i> <span class="book">Book</span> <span class="store">Store</span></a>
+      <a class="navbar-brand" href="#"><span class="book">Book</span> <span class="store">Store</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span  class="navbar-toggler-icon"></span>
       </button>
@@ -36,11 +35,11 @@ session_start();
           <li class="nav-item ">
             <a class="nav-link  text-center" href="http://localhost/bookstore/categories.php">Categories</a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item active">
             <a class="nav-link  text-center" href="http://localhost/bookstore/sell.php">Sell Book</a>
           </li>
           
-          <li class="nav-item dropdown active">
+          <li class="nav-item dropdown">
             <a class="nav-link text-center dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-user-circle-o pr-1" style="font-size:24px"></i>
             <?php 
@@ -80,60 +79,52 @@ session_start();
 </div>
  </nav>
 </header>
-    <main>
-        <section class="user"> 
-           <div class="information  pb-3 ">
-           <div class="col-md-6 col-9 pt-3 pb-3 m-auto text-left">
-            <h3 class="pt-2 pb-2" style="font-family: 'Orbitron', sans-serif !important;">Profile Detail</h3> 
-          <img src="upload/blank-profile-picture-973460_640.png" alt="book" class="imgmod img-fluid w-50 rounded-circle img-thumbnail  d-block" name="profileimg">
- <form class="pl-md-3 pr-md-3" method="POST" action="profilecontactdb.php" enctype="multipart/form-data">
+<main>
+
+<section class="user"> 
+ <div class="information  pb-3 ">
+ <div class="col-md-6 col-9 pt-3 pb-3 m-auto text-left">
+  <h3 class="pt-2 pb-2 ml-md-3 " style="font-family: 'Orbitron', sans-serif !important;">Sell Book</h3> 
+ <img src="upload/addphoto.jpg" alt="book" class="w-50 rounded img-thumbnail d-block ml-md-3 shadow-lg" name="bookimg">
+ <form class="pl-md-3 pr-md-3" method="POST" action="selldb.php" enctype="multipart/form-data">
 <div class="uploadfile pt-3 pb-2">
   <input type="file" class="p-1"name="file">
-  <input type="submit" class="border border-secondary rounded text-black ml-1" name="upload" value="upload">
 </div>
  <div class="form-group">
-    <label for="exampleInputPassword1">Name</label>
-    <input type="name" class="form-control" name="profilename" placeholder="Enter Name">
+    <label for="exampleInputPassword1">Book Name</label>
+    <input type="name" class="form-control"  name="profilebookname" placeholder="Enter BookName">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" name="profileemail" aria-describedby="emailHelp" placeholder="Enter Email">
+    <label for="exampleInputPassword1">Subject</label>
+    <input type="text" class="form-control"  name="profilesubject" placeholder="Enter Subject">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Phone No</label>
-    <input type="number" class="form-control"  name="phone" placeholder="Enter Phone Number">
+    <label for="exampleInputEmail1">Author</label>
+    <input type="name" class="form-control"  name="profileauthor"  placeholder="Enter AuthorName">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Address</label>
-    <input type="text" class="form-control" name="address" placeholder="Enter Address">
+    <label for="exampleInputPassword1">Edition</label>
+    <input type="text" class="form-control"  name="profileedition" placeholder="Enter Book Edition">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Landmark</label>
-    <input type="text" class="form-control" name="landmark" placeholder="Enter Landmark">
+    <label for="exampleInputPassword1">Selling Price (₹)</label>
+    <input type="number" class="form-control"  name="profilesellprice" placeholder="Enter Selling Price">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">State</label>
-    <input type="text" class="form-control"  name="state" placeholder="Enter State">
+    <label for="exampleInputPassword1">Market Price (₹)</label>
+    <input type="number" class="form-control"  name="profilemarketprice" placeholder="Enter Market Price">
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">City</label>
-    <input type="text" class="form-control"  name="city" placeholder="Enter City">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Zip code</label>
-    <input type="text" class="form-control" name="zip" placeholder="Enter Zip code">
-  </div>
-
-  <button type="submit" class="btn btn-dark" name="profilesubmit">Submit</button>
-  
-
+ 
+ <button type="submit" class="btn  btn-dark" name="profilesubmit">Submit</button>
 </form>
 
  </div>
 </div>
 </section>
+
 </main>
-  <footer class="bg-dark mt-3">
+
+<footer class="bg-dark mt-3">
     <div class="container">
       <div class="box d-md-flex flex-row pt-2">
       <div class="col-md-4 col-12 pt-md-4 pt-4 pb-md-3 pb-2">
@@ -186,8 +177,8 @@ session_start();
 
 
 </footer>
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>

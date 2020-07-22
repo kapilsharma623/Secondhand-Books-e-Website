@@ -13,8 +13,8 @@ session_start();
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/profile.css">
-<title>User Profile</title>
+<link rel="stylesheet" href="css/delivery.css">
+<title>Delivery Details</title>
 </head>
 <body>
     <header class="p-0"style="font-family: Open Sans;">
@@ -31,7 +31,7 @@ session_start();
             <a class="nav-link text-center" href="http://localhost/bookstore/store.php">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link text-center " href="http://localhost/bookstore/trendingbook.php">Trending Book</a>
+            <a class="nav-link text-center " href="http://localhost/bookstore/trendingbook.php">Best Seller</a>
           </li>
           <li class="nav-item ">
             <a class="nav-link  text-center" href="http://localhost/bookstore/categories.php">Categories</a>
@@ -80,17 +80,61 @@ session_start();
 </div>
  </nav>
 </header>
-    <main>
-        <section class="user"> 
-           <div class="information  pb-3 ">
-           <div class="col-md-6 col-9 pt-3 pb-3 m-auto text-left">
-            <h3 class="pt-2 pb-2" style="font-family: 'Orbitron', sans-serif !important;">Profile Detail</h3> 
-          <img src="upload/blank-profile-picture-973460_640.png" alt="book" class="imgmod img-fluid w-50 rounded-circle img-thumbnail  d-block" name="profileimg">
- <form class="pl-md-3 pr-md-3" method="POST" action="profilecontactdb.php" enctype="multipart/form-data">
-<div class="uploadfile pt-3 pb-2">
-  <input type="file" class="p-1"name="file">
-  <input type="submit" class="border border-secondary rounded text-black ml-1" name="upload" value="upload">
-</div>
+<main class="bg-light">
+    <section class="delivery bg-light">
+        <div class="heading d-flex flex-row bg-light pt-4">
+            <div class="col-11 m-auto border-bottom">
+                <div class="row">
+                <div class="col-md-2 col-3">
+                    <h2>IMAGE</h2>
+                </div>
+            <div class="col-md-8 col-7 pl-md-5">
+            <h2>DESCRIPTION</h2>
+         </div>
+            <div class="col-md-2 col-2 ">
+            <h2>SUB COST</h2>
+            </div>
+             </div>
+            </div>
+        </div>
+        <div class="detail d-flex flex-row bg-light">
+            <div class="col-11 m-auto ">
+                <div class="row pb-3 pt-3 border-bottom">
+                <div class="col-md-2 col-3 p-0">
+                 <img src="upload/<?php echo $_GET['image'] ;?>" alt="photo" class="w-100">
+                </div>
+            <div class="col-md-8 col-7 pt-3 pl-md-5">
+           <h5>BOOKNAME : <?php echo $_GET['book'];?></h5>
+           <h5 class="text-muted">AUTHOR : <?php echo $_GET['author']; ?></h5>
+           <h5 class="text-muted">EDITION :<?php echo $_GET['edition']; ?></h5>
+         </div>
+            <div class="col-md-2 col-2 pt-3">
+            <h5><?php echo $_GET['price']; ?>₹</h5>
+            </div>
+             </div>
+            </div>
+        </div>
+        <div class="cost d-flex flex-row bg-light">
+            <div class="col-11 m-auto ">
+                <div class="row pb-3 pt-3 border-bottom">
+                <div class="col-lg-2">
+                
+                </div>
+            <div class="col-lg-8 pt-3">
+           
+         </div>
+            <div class="col-lg-2 pt-3">
+            <h5>SUB COST: <span class="float-right"><?php echo $_GET['price']; ?>₹</span></h5>
+            <h5>SHIPPING COST: <span class="float-right">50</span></h5>
+            <h5>TOTAL: <span class="float-right"><?php echo $_GET['price']+50 ; ?>₹</span></h5>
+            </div>
+             </div>
+            </div>
+        </div>
+        <div class="address bg-light">
+        <div class="col-md-8 col-10 pt-3 pb-3 m-auto text-left">
+            <h1 class="pl-md-3 pr-md-3 pb-3 pt-2">Delivery Address</h1>
+        <form class="pl-md-3 pr-md-3" method="POST" action="profilecontactdb.php" >
  <div class="form-group">
     <label for="exampleInputPassword1">Name</label>
     <input type="name" class="form-control" name="profilename" placeholder="Enter Name">
@@ -124,14 +168,16 @@ session_start();
     <input type="text" class="form-control" name="zip" placeholder="Enter Zip code">
   </div>
 
-  <button type="submit" class="btn btn-dark" name="profilesubmit">Submit</button>
+  <button type="submit" class="btn btn-dark" name="profilesubmit">Confirm</button>
   
 
 </form>
+        </div>
 
- </div>
-</div>
-</section>
+        </div>
+
+
+    </section>
 </main>
   <footer class="bg-dark mt-3">
     <div class="container">

@@ -13,14 +13,17 @@ session_start();
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/profile.css">
-<title>User Profile</title>
+<link rel="stylesheet" href="css/buy.css">
+<title>BookName</title>
 </head>
-<body>
-    <header class="p-0"style="font-family: Open Sans;">
+<body >
+
+<header class="p-0"style="font-family: Open Sans;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#"><i class="fas fa-book-open" aria-hidden="true"style="color:white;"></i> <span class="book">Book</span> <span class="store">Store</span></a>
+     <a class="navbar-brand" href="#"><span class="book" style="font-family: 'Piedra', cursive;font-weight: 500;
+    font-size: 30px;color: #E5E7E9;color: #E5E7E9;">Book </span><span class="store" style="font-family: 'Piedra', cursive;font-weight: 500;
+    font-size: 30px;color: #E5E7E9;color: #E5E7E9;">Store</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span  class="navbar-toggler-icon"></span>
       </button>
@@ -28,19 +31,19 @@ session_start();
       <div class="collapse navbar-collapse " id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
          <li class="nav-item ">
-            <a class="nav-link text-center" href="http://localhost/bookstore/store.php">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link text-center" href="http://localhost/bookstore/store.php">Home</a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link text-center " href="http://localhost/bookstore/trendingbook.php">Trending Book</a>
+          <li class="nav-item">
+            <a class="nav-link text-center " href="http://localhost/bookstore/trendingbook.php">Best Seller</a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item">
             <a class="nav-link  text-center" href="http://localhost/bookstore/categories.php">Categories</a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item">
             <a class="nav-link  text-center" href="http://localhost/bookstore/sell.php">Sell Book</a>
           </li>
           
-          <li class="nav-item dropdown active">
+          <li class="nav-item dropdown">
             <a class="nav-link text-center dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-user-circle-o pr-1" style="font-size:24px"></i>
             <?php 
@@ -80,60 +83,86 @@ session_start();
 </div>
  </nav>
 </header>
-    <main>
-        <section class="user"> 
-           <div class="information  pb-3 ">
-           <div class="col-md-6 col-9 pt-3 pb-3 m-auto text-left">
-            <h3 class="pt-2 pb-2" style="font-family: 'Orbitron', sans-serif !important;">Profile Detail</h3> 
-          <img src="upload/blank-profile-picture-973460_640.png" alt="book" class="imgmod img-fluid w-50 rounded-circle img-thumbnail  d-block" name="profileimg">
- <form class="pl-md-3 pr-md-3" method="POST" action="profilecontactdb.php" enctype="multipart/form-data">
-<div class="uploadfile pt-3 pb-2">
-  <input type="file" class="p-1"name="file">
-  <input type="submit" class="border border-secondary rounded text-black ml-1" name="upload" value="upload">
-</div>
- <div class="form-group">
-    <label for="exampleInputPassword1">Name</label>
-    <input type="name" class="form-control" name="profilename" placeholder="Enter Name">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" name="profileemail" aria-describedby="emailHelp" placeholder="Enter Email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Phone No</label>
-    <input type="number" class="form-control"  name="phone" placeholder="Enter Phone Number">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Address</label>
-    <input type="text" class="form-control" name="address" placeholder="Enter Address">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Landmark</label>
-    <input type="text" class="form-control" name="landmark" placeholder="Enter Landmark">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">State</label>
-    <input type="text" class="form-control"  name="state" placeholder="Enter State">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">City</label>
-    <input type="text" class="form-control"  name="city" placeholder="Enter City">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Zip code</label>
-    <input type="text" class="form-control" name="zip" placeholder="Enter Zip code">
-  </div>
 
-  <button type="submit" class="btn btn-dark" name="profilesubmit">Submit</button>
-  
+<main>
+    <section class="buydetail">
+        <div class="container">
+         <div class="buy d-md-flex flex-row  mt-3">
+            <div class="col-md-4 col-12 mt-3 mb-3 p-3"> 
+                <img src="upload/<?php echo $_GET['img'] ;?>" alt="book" class="w-100 img-thumbnail">
+             </div>
+             <div class="col-md-7 col-12  mt-3 mb-3">
+                 <h2 class="bookname pt-3 pl-2 text-capitalize"><?php echo $_GET['book']; ?></h2>
+                 <p class="authorname pl-2 text-capitalize">AUTHOR:<?php echo $_GET['author']; ?></p>
+                 <P class="pl-2"><span class="text-muted">Availability: </span><span class="text-success">In stock</span></P>
+                 <div class="box">
+                     <div class="col-12 pl-2">
+                         <p class="pl-0"><?php echo $_GET['price']; ?> ₹</p>
+                         <form action="" method="POST">
+                           <a href="http://localhost/bookstore/delivery.php?book=<?php echo $_GET['book'];?>
+                           &author=<?php echo $_GET['author']; ?>
+                           &image=<?php echo $_GET['img'] ;?>
+                           &edition=<?php echo $_GET['edition']; ?>
+                           &price=<?php echo $_GET['price']; ?>" class="btn btn-dark">Buy</a>
 
-</form>
+                           <a href="http://localhost/bookstore/addtocart.php?book=<?php echo $_GET['book'];?>
+                         &author=<?php echo $_GET['author']; ?>
+                         &subject=<?php echo $_GET['subject'];?>
+                           &image=<?php echo $_GET['img'] ;?>
+                           &edition=<?php echo $_GET['edition'];?>
+                           &price=<?php echo $_GET['price']; ?>
+                           &des=<?php echo $_GET['des']; ?>"  class="btn btn-danger" name="addtocart">Add to Cart</a>
+                         
+                         </form>
+                        </div>
+                   </div>
 
- </div>
-</div>
-</section>
+                <div class="description pt-5 pb-5">
+                   <h2 id="description">Description</h2>
+                   <p><?php echo $_GET['des']; ?></p> 
+                   
+                    <p style="font-size: smaller;color:black;" class="m-1">EDITION:<?php echo $_GET['edition']; ?></p>
+                   
+                  <div class="col-11 m-0 p-0">
+                  <form action="<?php $_SERVER["PHP_SELF"]; ?>" method="post">
+                <div class="input-group mb-3 pt-3"> 
+                 <input type="text" class="form-control"  style="font-size:small;" name="zipcode" placeholder="Enter Postal Code" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                 <div class="input-group-append">
+                  <button class="btn btn-secondary" type="button" name="check" style="font-size:small;">Check COD Availability</button>
+                  <?php
+                    if(isset($_POST['check']))
+                    {
+                    $zipcode=$_POST['zipcode'];
+                    if($zipcode>600000 && $zipcode<=600118)
+                      {
+                        echo "Delivery Available";
+                      }
+                      else
+                      {
+                        echo "Delivery Not Available";
+                      }
+
+                    }
+                  
+                    ?>
+                  
+                </form>
+                 </div>
+                 </div>
+                </div>
+               </div>
+                
+                </div>
+            </div>
+        
+         </div>
+        </div>
+
+    </section>
+
 </main>
-  <footer class="bg-dark mt-3">
+
+<footer class="bg-dark mt-3">
     <div class="container">
       <div class="box d-md-flex flex-row pt-2">
       <div class="col-md-4 col-12 pt-md-4 pt-4 pb-md-3 pb-2">
@@ -186,8 +215,10 @@ session_start();
 
 
 </footer>
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
